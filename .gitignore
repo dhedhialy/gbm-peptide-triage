@@ -4,6 +4,3 @@ dist/
 *.log
 .vite/
 coverage/
-
-# added separately: pushing workflow files needs the gh `workflow` scope
-.github/workflows/

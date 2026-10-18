@@ -1,5 +1,7 @@
 # Peptide triage for glioblastoma — with a conformal *I don't know*
 
+**Live: <https://dhedhialy.github.io/gbm-peptide-triage/>**
+
 A browser-side triage tool for blood–brain-barrier (BBB) and cell-penetrating
 peptide candidates. It scores four objectives, draws the Pareto trade-offs
 between them, and does the thing no BBB web server does: **it refuses to answer
@@ -16,6 +18,10 @@ yarn dev           # http://localhost:5173
 The shipped `public/model.json` is already trained, so the app works on first
 run. `yarn train` (Python 3, scikit-learn, numpy) reproduces it from
 `data/raw/*.fasta` in ~75 s and rewrites `model.json` + `benchmark.json`.
+
+`bash scripts/deploy_pages.sh` rebuilds and pushes `dist/` to the `gh-pages`
+branch that GitHub Pages serves — branch-based deploy, so no Actions workflow
+scope on the clone's token is needed.
 
 ## What it actually does
 
